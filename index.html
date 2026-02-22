@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Для Кати</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            transform: translateY(-20px);
+            animation: float 4s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+        }
+        .message {
+            color: #4a4a4a;
+            font-size: 2.2em;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+        .heart {
+            font-size: 4.5em;
+            color: #ff9a9e;
+            animation: beat 1.2s ease-in-out infinite;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .sender {
+            color: #6a1b9a;
+            font-size: 1.8em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .floating-heart {
+            position: absolute;
+            color: rgba(255, 105, 180, 0.3);
+            font-size: 2em;
+            animation: float-heart 8s linear infinite;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(-20px); }
+            50% { transform: translateY(-30px); }
+        }
+        @keyframes float-heart {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Плавающие сердечки -->
+    <div class="floating-heart" style="left: 10%; animation-delay: 0s;">❤️</div>
+    <div class="floating-heart" style="left: 30%; animation-delay: -2s;">💕</div>
+    <div class="floating-heart" style="left: 50%; animation-delay: -4s;">💖</div>
+    <div class="floating-heart" style="left: 70%; animation-delay: -6s;">💗</div>
+
+    <div class="container">
+        <h1>Катя, ты — какашка!</h1>
+        <div class="message">Я тебя дукаю</div>
+        <div class="heart">&lt;3</div>
+        <div class="sender">От Лима</div>
+    </div>
+</body>
+</html>
